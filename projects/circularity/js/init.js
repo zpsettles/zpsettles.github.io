@@ -20,18 +20,23 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-
+        var circle;
+        var circles = [100];
 
         // TODO 2 : Create a function that draws a circle 
-        
-
+        circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+        circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+        physikz.addRandomVelocity(circle, canvas);
+        view.addChild(circle);
+        circles.push(circle);
         // TODO 3 / 7 : Call the drawCircle() function 
 
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
-        
+        drawCircle(5)
+        console.log(drawCircle)
         /* 
         This Function is called 60 times/second producing 60 frames/second.
         In each frame, for every circle, it should redraw that circle
@@ -39,10 +44,22 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-
+            physikz.updatePosition(){
+                physikz.updatePosition;
+	            physikz.updatePosition;
+	            physikz.updatePosition;
+	            physikz.updatePosition;
+	            physikz.updatePosition;
+            }
             
             // TODO 5 : Call game.checkCirclePosition() on your circles.
-           
+            game.checkCirclePosition(){
+                game.checkCirclePosition;
+                game.checkCirclePosition;
+                game.checkCirclePosition;
+                game.checkCirclePosition;
+                game.checkCirclePosition;
+            }
 
             // TODO 8 : Iterate over the array
            
@@ -62,8 +79,10 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
-
+            if (circle.x > canvas.width) {
+	             circle.x = 0;
+            }
+            var rightEdge = circle.x + circle.radius;
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
@@ -71,7 +90,13 @@ var init = function (window) {
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
-        
+        var loopsCompleted = 0; 
+        while (loopsCompleted < 10) {
+              drawCircle(100)
+              loopsCompleted++
+        }
+       
+       
         view.addChild(fps);
         app.addUpdateable(fps);
         
