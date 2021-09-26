@@ -20,25 +20,18 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-        var circle;
-        var circles = [];
+
 
         // TODO 2 : Create a function that draws a circle 
-        function drawCircle(){
-            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas);
-            view.addChild(circle);
-            circles.push(circle);
-        }
-        // TODO 3 / 7 : Call the drawCircle() function 
+        
+
+        // TODO 3 / 8 : Call the drawCircle() function 
 
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
-        for(var i = 0; i < 100; i++){
-            drawCircle();
-        }
+        
         /* 
         This Function is called 60 times/second producing 60 frames/second.
         In each frame, for every circle, it should redraw that circle
@@ -46,16 +39,12 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            
-            for(var i = 0; i < circles.length; i++){
-                physikz.updatePosition(circles[i]);
-                game.checkCirclePosition(circles[i]);
-            }
 
-            // TODO 5 : Call game.checkCirclePosition() on your circles.
             
+            // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
+           
 
-            // TODO 8 : Iterate over the array
+            // TODO 9 : Iterate over the array
            
             
         }
@@ -66,33 +55,23 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
-        var edge = 0 - circle.radius
+
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
-            if ( circle.x > canvas.width + circle.radius) {
-                circle.x = edge;
+            if ( circle.x > canvas.width ) {
+                circle.x = 0;
             }
             
-            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.x < edge) {
-	             circle.x = canvas.width + circle.radius;
-            } else if (circle.y > canvas.height + circle.radius){
-                       circle.y = edge
-            } else if (circle.y < edge){circle.y = canvas.height + circle.radius};
-            var rightEdge = circle.x + circle.radius;
+            // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+            
 
-            // YOUR TODO 6 CODE ENDS HERE //////////////////////////
+
+            // YOUR TODO 7 CODE ENDS HERE //////////////////////////
         }
         
         /////////////////////////////////////////////////////////////
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
-        var loopsCompleted = 0; 
-        while (loopsCompleted < 10) {
-              drawCircle(100)
-              loopsCompleted++
-        }
-       
-       
+        
         view.addChild(fps);
         app.addUpdateable(fps);
         

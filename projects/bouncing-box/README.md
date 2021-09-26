@@ -11,10 +11,11 @@
     - [TODO 2: Use Variables to remember where we've been](#todo-2-use-variables-to-remember-where-weve-been)
     - [TODO 3: Respond to Click Events](#todo-3-respond-to-click-events)
     - [TODO 4: Keeping Score](#todo-4-keeping-score)
-    - [TODO 5: Speeding Up](#todo-5-speeding-up)
-    - [TODO 6: Make the Box Bounce](#todo-6-make-the-box-bounce)
-    - [TODO 7: Fix a bug!](#todo-7-fix-a-bug)
-    - [TODO 8: Go Live](#todo-8-go-live)
+    - [TODO 5: Commit Your Working Code](#todo-5-commit-your-working-code)
+    - [TODO 6: Speeding Up](#todo-6-speeding-up)
+    - [TODO 7: Make the Box Bounce](#todo-7-make-the-box-bounce)
+    - [TODO 8: Fix a bug!](#todo-8-fix-a-bug)
+    - [TODO 9: Go Live](#todo-9-go-live)
 
 # Overview
 # (Skim over most of this, but read the section explaining how TODOs work carefully)
@@ -366,7 +367,19 @@ function handleBoxClick() {
 
 **Hint #1**: To increase `positionX` by `10` we wrote: `positionX = positionX + 10;`. How can you increase `points` by `1`?
 
-# TODO 5: Speeding Up
+# TODO 5: Commit Your Working Code
+
+You now have working code that makes a box move across the screen. It also responds to clicks by moving back to the left side of the screen and updating its text. Because you've completed quite a few steps of the project, confirm that your code is working and save it before making a commit and pushing your work. Committing and pushing your code will take a snapshot of your work and save it to an external site - Github. This also serves as a good place to come back to if you create any errors you aren't able to debug.
+
+In your bash terminal, enter the following commands, pressing ENTER after each one:
+
+`git add .`
+
+`git commit -m 'added code for movement and event handler'`
+
+`git push`
+
+# TODO 6: Speeding Up
 
 This TODO has 3 steps that you will need to complete on your own. 
 
@@ -387,20 +400,20 @@ In order to allow this speed to change over the course of our program, we will n
 
 So far, we've introduced 2 Variables to our program: `positionX` and `points`. Each variable changes over time and/or when the box is clicked. Use your knowledge of Variables to introduce a new Variable `speed` into the program!
 
-## TODO 5.1: Declare your Variable
+## TODO 6.1: Declare your Variable
 
-**CODE:** Declare a new Variable called `speed` and assign it to the value `10`.
+**CODE:** Declare a new Variable called `speed` and assign it the value `10`.
 
 **HINT** This variable should be declared with your other Variables `positionX` and `points`.
 
-## TODO 5.2: Replace the hard-coded value
+## TODO 6.2: Replace the hard-coded value
 
 **FIND:** The `update` Function.
 
 **CODE** Modify this code so that it uses your new `speed` Variable to change `positionX` instead of the hard-coded value `10`.
 
 
-## TODO 5.3: Increase the value of `speed` when the box is clicked
+## TODO 6.3: Increase the value of `speed` when the box is clicked
 
 
 **FIND:** Find the `handleBoxClick` Function.
@@ -418,7 +431,7 @@ Your program should satisfy the following requirements:
 - The box should display the correct number of times that you have clicked on it
 - The box should speed up when it is clicked
 
-# TODO 6: Make the Box Bounce
+# TODO 7: Make the Box Bounce
 
 This TODO has 2 steps. Make sure to complete all steps before moving on.
 
@@ -434,7 +447,7 @@ The collision occurs on Frame 3 when `positionX` (`250`) is *greater than* the c
 
 Even though the collision doesn't occur until Frame 3, the program has to check for collisions on each Frame and be ready to respond **IF** that collision occurs.
 
-## TODO 6.1: Detecting Collisions on the right wall
+## TODO 7.1: Detecting Collisions on the right wall
 
 **FIND:** Find the `update` Function since we need to check for collisions on every Frame. 
 
@@ -473,7 +486,7 @@ In Frame 4, 5, and 6 we can see the box moving to the _left_ with this new negat
 - `speed = speed * -1;`
 
 
-## TODO 6.2: Bounce the box off the left wall.
+## TODO 7.2: Bounce the box off the left wall.
 
 Now, using what you've learned about how to bounce the box off the right wall, it's time to bounce the box off the left wall.
 
@@ -527,7 +540,7 @@ Looks like multiplying `-5` with `1` still gives `-5`, which makes sense when yo
 
 </details>
  
-# TODO 7: Fix a bug!
+# TODO 8: Fix a bug!
 # (It's a lot of reading, but be sure to at least skim it to make sure you understand the issue)
 Great work! It seems like our Bouncing Box game is complete. However, we've created a _bug_ in our program that we need to squash! Thankfully, this bug doesn't break the program completely, it just makes it behave in a way that we'd like to change. 
 
@@ -674,7 +687,7 @@ Now that we have this function set up, we need to figure out *when* to call it.
 - If we want to end the game after 10 misclicks, how can we track how many times we've misclicked? Will we need a new Variable for this? If so, what should it's initial value be when the game starts?
 - How can we register that a misclick has occured? If we don't click on the box, what are we clicking on? Is there a way for us to use the code that handles the box click and modify it so that it handles clicking on the board?
 
-### TODO 8: Go Live
+### TODO 9: Go Live
 
 In your bash terminal, enter the following commands, pressing ENTER after each one:
 

@@ -22,11 +22,12 @@ Also at: http://bit.ly/op-spark-circularity
 	- [TODO 3 : Draw 5 circles!](#todo-3--draw-5-circles)
 	- [TODO 4 : Move your circles](#todo-4--move-your-circles)
 	- [TODO 5 : Keep your circles in the screen](#todo-5--keep-your-circles-in-the-screen)
-	- [TODO 6 : Loop from all sides](#todo-6--loop-from-all-sides)
-	- [TODO 7 : Draw 100 circles](#todo-7--draw-100-circles)
-	- [TODO 8 : Iterate over the array](#todo-8--Iterate-over-the-array)
-	- [TODO 9 : Move all our circles and keep them all in bounds](#todo-9--move-all-our-circles-and-keep-them-all-in-bounds)
-	- [TODO 10 : Go Live](#todo-10--go-live)
+	- [TODO 6 : Commit your working code](#todo-6--commit-your-working-code)
+	- [TODO 7 : Loop from all sides](#todo-7--loop-from-all-sides)
+	- [TODO 8 : Draw 100 circles](#todo-8--draw-100-circles)
+	- [TODO 9 : Iterate over the array](#todo-9--Iterate-over-the-array)
+	- [TODO 10 : Move all our circles and keep them all in bounds](#todo-10--move-all-our-circles-and-keep-them-all-in-bounds)
+	- [TODO 11 : Go Live](#todo-11--go-live)
 
 # Very Important
 ## Installation 
@@ -105,7 +106,7 @@ circles.push(circle);
 
 ## What does this code actually do?
 
-<details> <summary> Click the arrows to find out! </summary>
+<details> <summary> Click the arrow to find out! </summary>
 
 First we call a function from the `draw` library: a collection of functions that allow us to draw various shapes on our `canvas`. This method, `draw.randomCircleInArea` will draw a circle of random size, color, and location within the screen along with a few other settings. Check out the parameters of the function below:
 
@@ -121,12 +122,12 @@ Lastly we save each new circle in an array using the `.push()` method. Doing so 
 
 # TODO 3 : Draw 5 circles!
 
-**FIND:** The `PROGRAM SETUP` Section and `// TODO: 3 / 7`
+**FIND:** The `PROGRAM SETUP` Section and `// TODO: 3 / 8`
 
 **CODE:** Call your new `drawCircle` Function 5 times:
 
 ```js
-// TODO 3 / 7 : Call the drawCircle() function 
+// TODO 3 / 8 : Call the drawCircle() function 
 
 /* Your Function Calls HERE */
 ```
@@ -204,7 +205,19 @@ game.checkCirclePosition( /* Your Bracket Notation HERE */ );
 
 At this point you'll notice that the circles only come back if they exit through the right side of the screen. In the next part, we'll fix this.
 
-# TODO 6 : Loop from all sides
+# TODO 6 : Commit your working code 
+
+Since you have working code that creates five circles that move across the screen, now is a good time to commit your code and push your work. This will take a snapshot of your current work, save it to an external site - Github - and give you a good place to go back to if you have any later issues that you are unable to debug.
+
+In your bash terminal, enter the following commands, pressing ENTER after each one:
+
+`git add .`
+
+`git commit -m 'add five circles to project'`
+
+`git push`
+
+# TODO 7 : Loop from all sides
 
 **FIND:** The Function Declaration for `game.checkCirclePosition()`. Currently, it should contain this code:
 
@@ -238,7 +251,7 @@ Since `canvas.width` is the **Maximum** x-coordinate on the screen, if `circle.x
 
 The Function is incomplete however. It only keeps circles that exit the right side on the screen! 
 
-**CODE:** Add additional `if` statements to check the other three sides of the screen. Your Function should look like this:
+**CODE:** Add additional `if` statements to check the other three sides of the screen. For each `if` statement, write a comment that explains what the conditional statement checks for (such as, 'what side of the screen your circle is going off the screen?'), and what happens when the condition becomes true (where do you want to place the circle once it's off the screen?). Adding these comments before attempting to build your remaining 3 conditional statements will help make your life a bit easier by outlining which conditions you are building for. Don't be the coder that finds out later you were off track simply by not knowing what condition you were testing for! The Function to add conditionals to should look like this:
 
 ```js
 game.checkCirclePosition = function(circle) {
@@ -248,11 +261,11 @@ game.checkCirclePosition = function(circle) {
 		circle.x = 0;
 	}
 	
-	// TODO 5 : YOUR CODE STARTS HERE //////////////////////
+	// TODO 7 : YOUR CODE STARTS HERE //////////////////////
 	
 	/* Your conditional statements HERE */
 
-	// YOUR TODO 5 CODE ENDS HERE //////////////////////////
+	// YOUR TODO 7 CODE ENDS HERE //////////////////////////
 }
 ```
 
@@ -285,11 +298,11 @@ var rightEdge = circle.x + circle.radius;
 
 Use the `circle.radius` property to calculate the four edges of the circle to make the  circle more smoothly exit and enter the screen!
 
-# TODO 7 : Draw 100 circles
+# TODO 8 : Draw 100 circles
 
 A loop should do the job! 
 
-**FIND:** `// TODO 3 / 7` and your repetitive calls to `drawCircle()`.
+**FIND:** `// TODO 3 / 8` and your repetitive calls to `drawCircle()`.
 
 **CODE:** Replace your repetitive code with a loop (either a `while` or a `for` loop) that will call the `drawCircle()` Function 100 times.
 
@@ -310,7 +323,7 @@ for (var loopsCompleted = 0; loopsCompleted < 10; loopsCompleted++) {
 }
 ```
 
-# TODO 8 : Iterate over the array
+# TODO 9 : Iterate over the array
 
 Now that we have 100 circles, we need a way to move all 100 circles and keep all 100 circles within the screen without calling on each circle individually. **Iterating** is the way to go!
 
@@ -334,28 +347,29 @@ for (var i = 0; i < myArray.length; i++) {
 ```
 How can we apply this pattern to our `circles` array? What code do we want to execute for each value?
 
-**FIND:** The `update` Function, below **TODO 8**
+**FIND:** The `update` Function, below **TODO 9**
 
 **CODE:** Follow the pattern above and create a loop that will iterate over the `circles` array and create a variable `var eachCircle` for each circle in the Array. 
 
-# TODO 9 : Move all our circles and keep them all in bounds
+# TODO 10 : Move all our circles and keep them all in bounds
 
 Awesome job! Now that we have our loop in place and we are iterating over our `circles` Array, let's use the `circle` that we pull out on each loop to do some cool stuff!
 
 1. Within the loop that you just created, call the `physikz.updatePosition(eachCircle)` function.
 2. Then, call the `game.checkCirclePosition(eachCircle)` function.
 3. Delete your calls to those functions from **TODO 4** and **TODO 5**
-4. Sit back and relax
+4. In place of your deleted function calls, add a comment stating why they were deleted
+5. Sit back and relax
 
 Congrats!
 
-## TODO 10 : Go Live
+## TODO 11 : Go Live
 
 In your bash terminal, enter the following commands, pressing ENTER after each one:
 
 `git add .`
 
-`git commit -m 'adding circularity'`
+`git commit -m 'refactor to create 100 circles using loops'`
 
 `git push`
 

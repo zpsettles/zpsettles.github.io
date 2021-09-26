@@ -11,7 +11,7 @@
         grace: {assetKey: 'grace', points: 40},
         kennedi: {assetKey: 'kennedi', points: 50}
     };
-    Collectible(type, x, y, gravity, bounce))
+    
     /**
      * init: Initialize all collectables.
      * 
@@ -37,7 +37,7 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable(type.kennedi, 200, 170, 6, 0.7);
+        createCollectable(type.steve, 200, 170, 6, 0.7);
         
         
         

@@ -10,10 +10,11 @@
 - [Functions](#functions)
 - [Lesson Steps](#lesson-steps)
     - [TODO 1: Platforms](#todo-1-platforms)
-    - [TODO 2: Cannons](#todo-2-cannons)
-    - [TODO 3: Collectables](#todo-3-collectables)
-    - [TODO 4: Make your level challenging](#todo-4-make-your-level-challenging)
-    - [TODO 5: Go Live](#todo-5-go-live)
+    - [TODO 2: Collectables](#todo-2-collectables)
+    - [TODO 3: Commit Your Working Code](#todo-3-commit-your-working-code)
+    - [TODO 4: Cannons](#todo-4-cannons)
+    - [TODO 5: Make your level challenging](#todo-5-make-your-level-challenging)
+    - [TODO 6: Go Live](#todo-6-go-live)
 
 # Objective 
 # (Must Read)
@@ -154,8 +155,8 @@ Find and open the file `js/init/collectable.js` and use the `createCollectable()
 createCollectable(type, x, y, gravity, bounce);
 
 type: The type of the collectable. 
-x: The x coordineate for the collectable.
-y: The y coordineate for the collectable.
+x: The x coordinate for the collectable.
+y: The y coordinate for the collectable.
 gravity: OPTIONAL The gravitational pull on the collectable.
 bounce: OPTIONAL A factor effecting how much the collectable will bounce off platforms, etc.
 */
@@ -179,7 +180,37 @@ type.kennedi    // worth 50 points
 
 <hr> 
 
-## TODO 3: Cannons
+## TODO 3: Commit Your Working Code
+
+### Important!
+
+In the first website and portfolio projects, you ran three git commands - `git add`, `git commit`, and `git push`- at the end of each project, and your code magically appeared on the internet on your own personal website. How exactly did that happen, and what is git?
+
+### Git
+
+Git is a software used for tracking changes to files and managing and controlling different versions of the same file. Git is a commonly used software for developers, and is frequently used throughout projects when changes to code are made and new features are implemented. Github uses Git to help keep track of changes to code, and when you use the `git push` command, all of the commits you have made using `git commit` are sent to Github to keep track of.
+
+#### Note
+
+You've probably heard someone say you should always back up your computer to preserve anything in case it randomly decides to crash? Running these git commands is essentially the same thing! If anything should happen to your workspace and your work gets deleted, Github saves a copy of all your work whenever you run these commands. "Git" into the habit of running these commands every day in your workspace when you are coding -- it is always better to over commit than under commit!
+
+For this project and future projects, you'll commit and push work more frequently to better manage your workflow and track changes to your code.
+
+In your bash terminal, enter the following commands, pressing ENTER after each one.
+
+`git add .`
+
+`git commit -m 'add platforms and collectables to game'`
+
+<ul> <li style="list-style-type: none;">
+A note about `git commit` - When you save a document on your computer, you usually give your document a title so you can find it later. The same applies with a `git commit` command - the message identifies different versions of your file. In between the quotes, you always want to include a short description of why you are pushing your code to Github - whether it's saying 'adding platforms', 'adding cannons', or simply a message saying 'My teacher told me to commit so I do not lose my work' would work!
+</li></ul>
+
+`git push`
+
+<hr>
+
+## TODO 4: Cannons
 
 GOAL: Add as many cannons as necessary (at least 3) to make your level challenging. 
 
@@ -207,7 +238,7 @@ createCannon("left", 300, 1000); // a cannon on the left side of the screen, loc
 ### WARNING
 **Placing the cannons outside of bounds of the game will cause it to crash instantly!**
 
-## TODO 4: Make your level challenging!
+## TODO 5: Make your level challenging!
 
 Now that you have platforms, cannons, and collectables make your game unique and challenging! In order to get full credit your project must be playable! Specifically, 
 * It must be possible to collect all collectables
@@ -218,13 +249,13 @@ Now that you have platforms, cannons, and collectables make your game unique and
 
 <hr>
 
-## TODO 5: Go Live
+## TODO 6: Go Live
 
 In your bash terminal, enter the following commands, pressing ENTER after each one:
 
 `git add .`
 
-`git commit -m 'add portfolio.html file'`
+`git commit -m 'add cannons to game'`
 
 `git push`
 
