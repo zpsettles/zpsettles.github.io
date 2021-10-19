@@ -1,0 +1,57 @@
+ <div>
+       <h3>Interests</h3>
+     
+       <ul>
+         <li>Basketball</li>
+         <li>Drawing</li>
+         <li>Video Games</li>
+       </ul>
+     
+    </div>
+     
+       <h1>Zekhi's Epic Websitw</h1>
+       <ul>
+           <li>
+             <a href="index.html"> Home </a>
+           </>
+   
+          <li>
+            <a href="portfolio.html"> Portfolio </a>
+          </li>
+       </ul>
+
+    <!-- All content goes here -->
+    <div>
+        <img src=""
+    </div>
+
+  <!-- All content goes here -->
+  <div id="all-contents">
+      ...
+  </div>
+
+  <!-- All content goes here -->
+    <div id="all-contents">
+        ...
+    </div>
+    <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+        <li>
+          <a href="portfolio.html"> Portfolio </a>
+        </li>
+    </ul>
+    <!-- Sidebar section -->
+    <div>
+        <img>
+    </div>
+    <!-- Content section -->
+    <div>
+        <h2> ... </h2>
+        <p> ... </p>
+        <!-- Interests section -->
+        <div>
+            ...
+        </div>
+    </div>
